@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Астро Календарь</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: Arial, sans-serif;
+      background: #eaf4ff;
+      color: #1c2b3a;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #567;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .date {
+      font-size: 14px;
+      color: #6a7b8c;
+      margin-bottom: 10px;
+    }
+
+    .moon {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .recommendation {
+      line-height: 1.5;
+    }
+
+    .today {
+      border: 2px solid #8bbcff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <h1>🌙 Астро Календарь</h1>
+  <div class="subtitle">
+    Тестовая версия календаря
+  </div>
+
+  <div id="calendar"></div>
+</div>
+
+<script>
+const astroCalendar = [
+  {
+    date: "2026-05-15",
+    lunarDay: "3 лунный день",
+    moonPhase: "Растущая Луна",
+    sign: "Рак",
+    recommendation: "День подходит для общения с близкими, заботы о себе и домашних дел."
+  },
+  {
+    date: "2026-05-16",
+    lunarDay: "4 лунный день",
+    moonPhase: "Растущая Луна",
+    sign: "Лев",
+    recommendation: "Хорошее время для проявленности, контента и творческих проектов."
+  },
+  {
+    date: "2026-05-17",
+    lunarDay: "5 лунный день",
+    moonPhase: "Растущая Луна",
+    sign: "Лев",
+    recommendation: "Подходящий день для запуска идей и активных действий."
+  }
+];
+
+const calendarEl = document.getElementById("calendar");
+const today = new Date().toISOString().split("T")[0];
+
+astroCalendar.forEach(day => {
+  const card = document.createElement("div");
+
+  card.className = "card";
+
+  if(day.date === today){
+    card.classList.add("today");
+  }
+
+  card.innerHTML = `
+    <div class="date">${day.date}</div>
+    <div class="moon">
+      ${day.lunarDay} • ${day.moonPhase}
+    </div>
+    <div><strong>Знак:</strong> ${day.sign}</div>
+    <div class="recommendation">
+      ${day.recommendation}
+    </div>
+  `;
+
+  calendarEl.appendChild(card);
+});
+</script>
+
+</body>
+</html>
