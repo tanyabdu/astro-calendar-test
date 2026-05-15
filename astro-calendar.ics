@@ -4,27 +4,27 @@ PRODID:-//Astro Calendar//RU
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 BEGIN:VEVENT
-UID:astro-20260515@test
+UID:astro-20260515@tanyabdu
 DTSTAMP:20260515T120000Z
 DTSTART;VALUE=DATE:20260515
 DTEND;VALUE=DATE:20260516
-SUMMARY:3 лунный день • Растущая Луна
+SUMMARY:3 лунный день - Растущая Луна
 DESCRIPTION:День подходит для общения с близкими, заботы о себе и домашних дел.
 END:VEVENT
 BEGIN:VEVENT
-UID:astro-20260516@test
+UID:astro-20260516@tanyabdu
 DTSTAMP:20260515T120000Z
 DTSTART;VALUE=DATE:20260516
 DTEND;VALUE=DATE:20260517
-SUMMARY:4 лунный день • Растущая Луна
+SUMMARY:4 лунный день - Растущая Луна
 DESCRIPTION:Хорошее время для проявленности, контента и творческих проектов.
 END:VEVENT
 BEGIN:VEVENT
-UID:astro-20260517@test
+UID:astro-20260517@tanyabdu
 DTSTAMP:20260515T120000Z
 DTSTART;VALUE=DATE:20260517
 DTEND;VALUE=DATE:20260518
-SUMMARY:5 лунный день • Растущая Луна
+SUMMARY:5 лунный день - Растущая Луна
 DESCRIPTION:Подходящий день для запуска идей и активных действий.
 END:VEVENT
 END:VCALENDAR
